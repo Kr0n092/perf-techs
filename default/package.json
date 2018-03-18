@@ -1,0 +1,12 @@
+{
+    "name": "perf-tech-amp",
+    "displayName": "A default HTML page",
+    "version": "0.0.1",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "cors": "2.8.4",
+        "express": "4.16.2"
+    }
+}
