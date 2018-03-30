@@ -1,9 +1,8 @@
 {
-    "name": "perf-tech-amp",
-    "displayName": "A default HTML page",
+    "name": "perf-tech",
     "version": "0.0.1",
     "scripts": {
-        "start": "node index.js"
+        "start": "nodemon ./app.js"
     },
     "dependencies": {
         "cors": "2.8.4",
