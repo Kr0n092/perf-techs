@@ -1,0 +1,57 @@
+version: "3"
+services:
+  default:
+    build:
+      context: .
+      args:
+        build_dir: "default"
+        port: 4567
+    image: default
+    ports:
+      - "4567:4567"
+    environment:
+      - PORT=4567
+  sw:
+    build:
+      context: .
+      args:
+        build_dir: "serviceworker"
+        port: 4568
+    image: serviceworker
+    ports:
+      - "4568:4568"
+    environment:
+      - PORT=4568
+  amp:
+    build:
+      context: .
+      args:
+        build_dir: "amp"
+        port: 4569
+    image: amp
+    ports:
+      - "4569:4569"
+    environment:
+      - PORT=4569
+  amp-heavy:
+    build:
+      context: .
+      args:
+        build_dir: "amp-heavy"
+        port: 4570
+    image: amp-heavy
+    ports:
+      - "4570:4570"
+    environment:
+      - PORT=4570
+  default-heavy:
+    build:
+      context: .
+      args:
+        build_dir: "default-heavy"
+        port: 4571
+    image: default-heavy
+    ports:
+      - "4571:4571"
+    environment:
+      - PORT=4571
