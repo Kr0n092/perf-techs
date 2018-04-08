@@ -55,3 +55,15 @@ services:
       - "4571:4571"
     environment:
       - PORT=4571
+  h2-nginx:
+    build:
+      context: ./h2-nginx
+    image: h2-nginx
+    ports:
+      - "2443:443"
+  h2-apache:
+    build:
+      context: ./h2-apache
+    image: h2-apache
+    ports:
+      - "1443:443"
