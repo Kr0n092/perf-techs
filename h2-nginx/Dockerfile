@@ -9,6 +9,7 @@ RUN mkdir /etc/service/nginx
 ADD conf/nginx.sh /etc/service/nginx/run
 RUN chmod +x /etc/service/nginx/run
 
+COPY conf/nginx.conf /etc/nginx/nginx.conf
 COPY conf/nginx-default.conf /etc/nginx/conf.d/default.conf
 
 COPY certs/ssl-cert-snakeoil.pem /etc/ssl/certs/ssl-cert-snakeoil.pem
