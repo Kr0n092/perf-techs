@@ -10,11 +10,11 @@ module.exports = {
     path: path.resolve(__dirname, 'static')
   },
   mode: "production",
-  // optimization: {
-  //   splitChunks: {
-  //     chunks: 'all'
-  //   }
-  // },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  },
   module: {
     rules: [
       {
