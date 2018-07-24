@@ -6,10 +6,10 @@ const app = express()
 app.use(cors())
 
 app.use(express.static("public"))
-app.use('/images', express.static("/home/olivier/Projects/perf-techs/resource-hints/default/images"));
+app.use('/images', express.static(__dirname + "/images"));
 
 app.get("/", (req, res, next) => {
-    res.sendFile("/home/olivier/Projects/perf-techs/resource-hints/default/index.html");
+    res.sendFile(__dirname + "/index.html");
 });
 
 app.listen(3000, () => {
